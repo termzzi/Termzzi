@@ -4,10 +4,11 @@ body{
     margin: 0;
     background: linear-gradient(to button, #0f172a, #1e293b);
     color: white;
-    background-image: url("7.jpg");
+    background-image: url(image/7.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    padding: 10px;
 }
 
 
@@ -131,21 +132,38 @@ html{
 }
 .card{
     background-color: blueviolet;
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     width: 220px;
-    height: 200px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     backdrop-filter: blur(10px);
     position: relative;
     z-index: 2;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.card button{
+    margin-top: auto;
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .card:hover{
     transform: translateY(-10px);
+}
+.card{
+    width: 300px;
+    max-width: 90%;
 }
 
 /* .card:hover{ */
@@ -177,6 +195,9 @@ html{
     transition-duration: 7s;
 }
 
+.card button{
+    margin-bottom: auto;
+}
 
 .card img {
     width: 200px;
@@ -263,4 +284,23 @@ h2{
 }
 .oo{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media(max-width:768){
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 90%;
+    }
+}
+
+@media(max-width:768px){
+    h1 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 14px;
+    }
 }
